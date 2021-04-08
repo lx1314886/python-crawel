@@ -9,7 +9,7 @@ def update_title():
     detail_links = []
     shop_nums_link = []
     with UsingMysql(log_time=True) as um:
-        start_time = (datetime.datetime.now() - datetime.timedelta(hours=24)).strftime("%Y-%m-%d %H:%M:%S")
+        start_time = (datetime.datetime.now() - datetime.timedelta(hours=12)).strftime("%Y-%m-%d %H:%M:%S")
         end_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         sql = "select id,smzdm_url from t_shop_ where create_date between '{}' and '{}'".format(start_time, end_time)
         data_list = um.fetch_all(sql)
