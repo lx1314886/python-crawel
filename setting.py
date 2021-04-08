@@ -11,3 +11,5 @@ MYSQL_PORT = 3306
 MYSQL_DBNAME = 'mfbcloud'
 # 数据库编码
 MYSQL_CHARSET = 'utf8mb4'
+# 数据库名称
+MYSQL_DBNAME1 = 'mfbcloud1'
