@@ -9,8 +9,10 @@ from smzdm.qbhj import QbhjSpider
 def job():
     print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
     update_title()
-def bcj_job():
+def hj_job():
     BcjSpider()
+    JxhjSpider()
+    QbhjSpider()
 def jxhj_job():
     JxhjSpider()
 def qbhj_job():
@@ -24,7 +26,5 @@ if __name__ == '__main__':
     scheduler = BlockingScheduler()
     # 采用固定时间间隔（interval）的方式，每隔60分钟执行一次 minutes seconds
     scheduler.add_job(job, 'interval',max_instances=10, minutes=60)
-    scheduler.add_job(bcj_job, 'interval', max_instances=10, minutes =1)
-    scheduler.add_job(jxhj_job, 'interval', max_instances=10, minutes =1)
-    scheduler.add_job(qbhj_job, 'interval', max_instances=10, minutes =1)
+    scheduler.add_job(hj_job, 'interval', max_instances=10, minutes =1)
     scheduler.start()
