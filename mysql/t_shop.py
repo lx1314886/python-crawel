@@ -67,19 +67,20 @@ def parse_detail(url):
     temp_links = []
     temp_text_links = []
     shop_num = re.search(r'-?\d+', str(url), re.M|re.I).group()
+    print(shop_num)
     if links and text_links:
         for link in links:
             if len(text_links) > 0:
                 text_link = text_links.pop()
                 if text_link in dd:
-                    if 'www.smzdm.com/p' in link:
+                    if 'www.smzdm.com/p' in link and link:
                         temp_links.append(parse_link(link))
                     if 'go.smzdm.com' in link:
                         temp_links.append(link)
                     temp_text_links.append(text_link)
     return (title, dd, temp_links, temp_text_links, shop_num)
 
-def parse_link(self, url):
+def parse_link(url):
     headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
     }

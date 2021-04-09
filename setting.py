@@ -8,8 +8,8 @@ MYSQL_PASSWORD = 'Ats_root_1231'
 # 数据库端口
 MYSQL_PORT = 3306
 # 数据库名称
-MYSQL_DBNAME = 'mfbcloud'
+MYSQL_DBNAME = 'mfbcloud1'
 # 数据库编码
 MYSQL_CHARSET = 'utf8mb4'
 # 数据库名称
-MYSQL_DBNAME1 = 'mfbcloud1'
+MYSQL_DBNAME1 = 'mfbcloud'
